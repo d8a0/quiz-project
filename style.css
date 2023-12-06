@@ -11,7 +11,7 @@
 }
 
 h1 {
-    font-size 5.4rem;
+    font-size: 5.4rem;
     color: #422800;
     margin-bottom: 20px;
     font-size: 70px;
@@ -45,7 +45,7 @@ h2 {
 
 .flex-center {
     justify-content: center;
-    align-lines: center;
+    align-items: center;
 }
 
 .justify-center {

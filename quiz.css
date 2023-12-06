@@ -54,7 +54,7 @@
     border: 0.2rem solid #86efac;
     margin-top: 2rem;
     border-radius: 50px;
-    overflow:
+    overflow: scroll;
 }
 
 #progressBarFull {
