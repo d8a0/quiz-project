@@ -71,7 +71,7 @@ h2 {
     display: inline-block;
     font-weight: 600;
     font-size: 18px;
-    padding: 0 18px;
+    padding: 0 120px;
     line-height: 50px;
     text-align: center;
     text-decoration: none;
@@ -79,6 +79,7 @@ h2 {
     -webkit-user-select: none;
     touch-action: manipulation;
     margin-bottom: 20px;
+
 }
 
 .button-74:hover {
