@@ -4,18 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
+    <title>Quiz page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="quiz.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <div class="container">
+    <!-- main page -->
+    <div id="homePage" class="container">
         <div id="home" class="flex-column flex-center">
-            <h1>Start here</h1>
-            <a href="/quiz.html" class="btn">Start</a>
-            <a href="/highscores.html" id="highscore-btn" class="btn">High Scores 🏆</a>
+            <h1>South American <br> Capitals</h1>
+            <button onclick="quizStart()" class="btn">Start</button>
+            <a onclick="showHighScores()" id="highscore-btn" class="btn">High Scores 🏆</a>
         </div>
     </div>
+    <!-- questions below -->
+    <div id="quizQuestions" class="container">
+        <div id="quiz" class="justify-center flex-column">
+            <div id="hud">
+                <div class="hud-item">
+                    <h1 id="progressText" class="hud-prefix">
+                        Question
+                    </h1>
+                    <div id="progressBar">
+                        <div id="progressBarFull"></div>
+                    </div>
+                </div>
+                <div class="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h1 class="hud-main-text" id="score">
+                        0
+                    </h1>
+                </div>
+            </div>
+            <div id="end-text"></div>
+            <div id="question">to be added</div>
+
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-number="1">Choice</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-number="2">Choice</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">C</p>
+                <p class="choice-text" data-number="3">Choice</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">D</p>
+                <p class="choice-text" data-number="4">Choice</p>
+            </div>
+        </div>
+    </div>
+    <!-- end page -->
+    <div id="endPage" class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <form class="end-form-container">
+                <h2 id="end-text">Enter your name below to save your score</h2>
+                <input type="text" name="name" id="username" placeholder="Enter your name">
+                <button class="btn" id="saveScoreBtn" type="submit" onclick="saveScore('finalScore', 'username')"
+                    disabled>Save</button>
+            </form>
+            <a onclick="showHomePage()" class="btn">Play again</a>
+
+        </div>
+    </div>
+    <!-- high scores -->
+    <div id="showHighScores" class="container">
+        <div class="flex-center flex-column">
+            <h1 id="finalScore">Leaderboard</h1>
+            <ol id="highScoresList">
+                <li id="scoreOne">0</li>
+                <li id="scoreTwo">0</li>
+                <li id="scoreThree">0</li>
+                <li id="scoreFour">0</li>
+            </ol>
+
+        </div>
+    </div>
+
 </body>
+<script src="end.js"></script>
+<script src="quiz.js"></script>
 
 </html>
