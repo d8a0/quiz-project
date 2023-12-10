@@ -196,7 +196,7 @@ choice.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply);
             selectedChoice.style.background = '';
             getNewQuestion();
-        }, 500);
+        }, 200);
     });
 });
 
